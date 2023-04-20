@@ -3,12 +3,12 @@ background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("./images/background.jpg")
+    url("../assets/background.jpg")
       center;
 }
 
 .frame{
-  background: url("./images/round-frame-with-tropical-leaves-golden-element-vector-clipart-wedding-invitations_530505-386_adobe_express.png") center;
+  background: url("../assets/round-frame-with-tropical-leaves-golden-element-vector-clipart-wedding-invitations_530505-386_adobe_express.png") center;
 }
 
 
