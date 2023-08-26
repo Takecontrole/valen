@@ -14,13 +14,20 @@ display: flex;
 `;
 const Center = styled.div`
 width: 260px
-  
-  
+`;
+const Button = styled.a`
+position: absolute;
+padding:0.5rem;
+border-radius:10px;
+background-color:white;
+right: 5%;
+color: black;
+text-decoration: none;
+font-weight: bold;
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
-  
         font-size: 60px;
         @include mobile{
           font-size: 20px;
@@ -63,6 +70,7 @@ const ShopName = () => {
        <Center>
           <Logo className="logo"><span style={{color:"white"}} ref={textRef}></span></Logo>
         </Center>
+        <Button href="https://valentino-admin.vercel.app/">АДМИН</Button> 
         </Container>
     )
 }

@@ -59,8 +59,8 @@ const Button = styled.button`
 
 function Login() {
   
-  const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("afro@gmail.com");
+    const [password, setPassword] = useState("afro");
     const [login, { isError, isLoading, error }] = useLoginMutation();
     const navigate = useNavigate();
     function handleLogin(e) {
@@ -69,7 +69,7 @@ function Login() {
             if (!isError) {
                 setTimeout(() => {
                     navigate("/");
-                }, 1500);
+                }, 500);
             }
         });
     }

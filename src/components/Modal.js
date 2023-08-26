@@ -22,11 +22,9 @@ const Modal = ({ open, onClose }) => {
             <p>на первую покупку!</p>
           </div>
           <div className='btnContainer'>
-          <LinkContainer to="/signup">
-            <button className='btnPrimary'>
-              <span className='bold'>ОК</span>, перейти к регистрации
+            <button onClick={onClose} className='btnPrimary'>
+              <span className='bold'>ОК</span>, получить купон
             </button>
-            </LinkContainer>
             <button onClick={onClose} className='btnOutline'>
               <span className='bold'>НЕТ</span>, спасибо
             </button>

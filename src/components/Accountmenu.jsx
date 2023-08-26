@@ -43,7 +43,7 @@ const user = useSelector((state) => state.user);
                                 <li>
                             <Link style={{textDecoration:"none", color:"white"}} to="/cart">
                                  <ShoppingCartOutlined/>
-                                    {user?.cart.count > 0 && (
+                                    {user?.cart?.count > 0 && (
                                        <span className="badge badge-warning" id="cartcount">
                                             {user.cart.count}
                                         </span>
@@ -94,7 +94,7 @@ const user = useSelector((state) => state.user);
       </ul>
                 {/* notifications */}
             <div className="notifications-container" ref={notificationRef} style={{ position: "absolute",  display: "none" }}>
-                {user?.notifications.length > 0 ? (
+                {user?.notifications?.length > 0 ? (
                     user?.notifications.map((notification) => (
                         <p className={`notification-${notification.status}`}>
                             {notification.message}

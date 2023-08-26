@@ -201,10 +201,7 @@ const products = useSelector((state) => state.products);
     useEffect(() => {
       setLoading(true);
         axios.get("/products").then(({ data }) => { dispatch(updateProducts(data));
-        setTimeout(() => {
-                    setLoading(false);
-                }, 1500);
-        
+      setLoading(false);
         });
     }, []);
     
@@ -267,7 +264,7 @@ const handleDragStart = (e) => e.preventDefault();
                                 <span>
                             <Link style={{textDecoration:"none", color:"#15023a", marginRight:"15px"}} to="/cart">
                                  <ShoppingCartOutlined/>
-                                    {user?.cart.count > 0 && (
+                                    {user.cart?.count > 0 && (
                                        <span className="badge badge-warning" id="cartcount">
                                             {user.cart.count}
                                         </span>

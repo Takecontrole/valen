@@ -42,7 +42,7 @@ function Menu({menuOpen, setMenuOpen, accountOpen, setAccountOpen, brandsOpen, s
                                 <li>
                             <Link style={{textDecoration:"none", color:"white"}} to="/cart">
                                  <ShoppingCartOutlined/>
-                                    {user?.cart.count > 0 && (
+                                    {user.cart?.count > 0 && (
                                        <span className="badge badge-warning" id="cartcount">
                                             {user.cart.count}
                                         </span>
@@ -81,7 +81,20 @@ function Menu({menuOpen, setMenuOpen, accountOpen, setAccountOpen, brandsOpen, s
           Коллекции
         </li>
       </ul>
-
+                      {/* notifications */}
+            <div className="notifications-container" ref={notificationRef} style={{ position: "absolute",  display: "none" }}>
+                {user?.notifications?.length > 0 ? (
+                    user?.notifications.map((notification) => (
+                        <p className={`notification-${notification.status}`}>
+                            {notification.message}
+                            <br />
+                            <span>{notification.time.split("T")[0] + " " + notification.time.split("T")[1]}</span>
+                        </p>
+                    ))
+                ) : (
+                    <p>Нет уведомлений</p>
+                )}
+       </div>
     </div>
   );
 }
